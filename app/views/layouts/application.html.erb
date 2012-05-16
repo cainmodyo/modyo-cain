@@ -15,8 +15,8 @@
         <div class="container">
           	<%= link_to "cain app", '#', id: "logo" %>
           	<div class="btn-group">
-			  	<button class="btn"><%= link_to "Home",    '#' %></button>
-			  	<button class="btn"><%= link_to "Help",    '#' %></button>
+			  	<button class="btn"><%= link_to "Users",    '/users' %></button>
+			  	<button class="btn"><%= link_to "Events",    '/events' %></button>
 			  	<button class="btn"><%= link_to "Sign in", '#' %></button>
 			</div>
         </div>
@@ -26,5 +26,7 @@
       <%= yield %>
     </div>    
     <%= render 'layouts/footer' %>
+
+    <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
